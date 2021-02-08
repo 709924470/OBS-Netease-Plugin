@@ -37,20 +37,31 @@
             }
             function onUpdate(jsonObject){
                 M.Toast.dismissAll();
-                M.toast({html: '<span> '+
-                                    '<img src="' + jsonObject.picUrl + '" style="width:5em;height:5em;" class="circle"> '+
+                M.toast({html: '<span style="width:5em;height:5em;"> '+
+                                    '<img src="' + jsonObject.picUrl + '" style="width:5em;height:5em;"> '+
                                 '</span> '+
-                                '<div style="padding-left:1em;ling-height=2em;" class="valign-wrapper center-align"> '+
-                                    '<font style="border: 0;padding: 0;margin: 0;line-height: 100%;"> '+
-                                        '<h4> '+
+                                '<div style="padding-left:1em;" class="valign-wrapper center-align"> '+
+                                    '<font style="padding-right:1em;padding-bottom:0.5em;line-height: 60%;"> '+
+                                        '<h5 style="margin: 0;"> '+
                                             jsonObject.name + ' - ' + jsonObject.artists+
                                         '</h4> '+
                                         '<br/> '+
                                         jsonObject.album_name+
                                     '</font> '+
                                 '<div>',
-                        classes: 'rounded blue-grey lighten-5 z-depth-3 blue-grey-text text-darken-3 right', displayLength: 300000});
+                        classes: 'blue-grey darken-4 z-depth-3 blue-text text-lighten-5 right', displayLength: 300000});
             }
         </script>
+        <style>
+            #toast-container {
+                margin-right: 0; 
+                max-width: 30%; 
+            }
+
+            #toast-container > div.toast {
+                padding:0; 
+                margin:0;
+            }
+        </style>
     </body>
 </html>
